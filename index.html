@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FitNow — Your Health. Your Future.</title>
+<meta name="description" content="FitNow personalised wellness and nutrition guidance.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--green:#123f32;--cream:#f7f1e5;--gold:#d5a13a;--ink:#17352d;--muted:#66756f;--white:#fff;--red:#b43a32;--shadow:0 18px 50px rgba(18,63,50,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.08;margin:0 0 18px}h1{font-size:clamp(46px,7vw,82px)}h2{font-size:clamp(36px,5vw,58px)}h3{font-size:28px}
+a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between;background:#fffdf8;position:sticky;top:0;z-index:20;border-bottom:1px solid #eee6d8}
+.logo{font-size:31px;font-weight:700;letter-spacing:-1.5px;color:var(--green)}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}.navlinks a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;font-weight:700;border:0;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--gold);color:#183b31}.btn-dark{background:var(--green);color:white}.btn-wa{background:#1f9d62;color:#fff}
+.hero{background:linear-gradient(90deg,rgba(10,49,39,.96),rgba(10,49,39,.72)),url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1800&q=85") center/cover;min-height:700px;color:#fff;display:flex;align-items:center}
+.hero-inner{max-width:850px;padding:85px 24px}.badge{display:inline-flex;gap:9px;align-items:center;background:rgba(180,58,50,.95);padding:9px 14px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:22px}.dot{width:8px;height:8px;background:#fff;border-radius:50%;animation:pulse 1.4s infinite}@keyframes pulse{50%{opacity:.25}}
+.hero p{font-size:18px;max-width:700px;color:#e7eee9}.quote{border-left:3px solid var(--gold);padding:10px 0 10px 18px;margin:26px 0;font-size:16px;color:#f4eee0;max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+section{padding:90px 0}.section-head{max-width:760px;margin-bottom:45px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;color:#a57619;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fffdf8;padding:30px;border-radius:20px;box-shadow:var(--shadow);border-top:5px solid var(--gold)}.card:nth-child(2){border-color:#279e9a}.card:nth-child(3){border-color:#8663b4}.card:nth-child(4){border-color:#e3a43c}.card:nth-child(5){border-color:#4e8d62}.card:nth-child(6){border-color:#9a7657}.card p{color:var(--muted);margin:0}.icon{font-size:28px;margin-bottom:14px}
+.steps{background:#fffdf8}.stepgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.step{padding:25px}.num{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:20px}
+.testimonials{background:var(--green);color:#fff}.testgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.quote-card{background:rgba(255,255,255,.08);padding:28px;border-radius:18px}.stars{color:var(--gold);letter-spacing:3px}.disclaimer{font-size:12px;color:#b8c9c1;margin-top:20px}
+.cta{background:var(--gold);padding:55px;border-radius:28px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{max-width:650px}
+.contact{background:#fffdf8}.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.contactbox{background:var(--cream);padding:30px;border-radius:20px}.contactrow{padding:14px 0;border-bottom:1px solid #dfd7c8}.contactrow:last-child{border:0}
+form{display:grid;gap:13px}input,select,textarea{width:100%;padding:14px 16px;border:1px solid #d8d0c2;border-radius:12px;font:inherit;background:#fff}textarea{min-height:130px;resize:vertical}
+footer{background:#0d3026;color:#dbe5df;padding:55px 0}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.footerlogo{color:#fff}.small{font-size:13px;color:#aebeb7}
+.float{position:fixed;right:22px;bottom:22px;background:#1f9d62;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 10px 25px #0003;z-index:30}
+@media(max-width:800px){.navlinks{display:none}.grid,.stepgrid,.testgrid,.contactgrid,.footgrid{grid-template-columns:1fr}.hero{min-height:650px}.cta{flex-direction:column;align-items:flex-start}.hero-inner{padding-top:70px;padding-bottom:70px}section{padding:65px 0}}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="width:100%;display:flex;align-items:center;justify-content:space-between"><a class="logo" href="#">fit<span>now</span></a><div class="navlinks"><a href="#programs">Programs</a><a href="#how">How It Works</a><a href="#about">About</a><a href="#contact">Contact</a><a class="btn btn-dark" href="#contact">Start Now</a></div></div></nav>
+
+<header class="hero"><div class="wrap hero-inner">
+<div class="badge"><span class="dot"></span> Every year you wait, the damage compounds.</div>
+<h1>Your Body Is Sending Signals. Are You Listening?</h1>
+<p>Don't wait for a diagnosis to start caring for your health. Build better habits with structured, personalised nutrition and fitness guidance.</p>
+<div class="quote">“Lifestyle-related problems can build silently for years. The earlier you pay attention, the more choices you have.”</div>
+<div class="actions"><a class="btn btn-primary" href="#programs">Explore Programs</a><a class="btn btn-wa" href="https://wa.me/917019728215">WhatsApp Us</a></div>
+</div></header>
+
+<section id="programs"><div class="wrap"><div class="section-head"><div class="eyebrow">Personalised support</div><h2>Programs built around your goals.</h2><p>Practical guidance designed to help you take the next step with clarity and consistency.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">❤️</div><h3>Cholesterol</h3><p>Build sustainable food and lifestyle habits that support heart health.</p></div>
+<div class="card"><div class="icon">🦋</div><h3>Thyroid</h3><p>Structured nutrition and routine guidance tailored to your needs.</p></div>
+<div class="card"><div class="icon">💪</div><h3>Weight Gain</h3><p>Healthy, balanced strategies for gaining strength and body weight.</p></div>
+<div class="card"><div class="icon">⚖️</div><h3>Weight Loss</h3><p>A realistic approach focused on consistency rather than crash diets.</p></div>
+<div class="card"><div class="icon">🏃</div><h3>General Fitness</h3><p>Improve everyday energy, movement, food choices and routines.</p></div>
+<div class="card"><div class="icon">🥗</div><h3>Diet Consultation</h3><p>Get practical nutrition guidance for your personal lifestyle and goals.</p></div>
+</div></div></section>
+
+<section class="steps" id="how"><div class="wrap"><div class="section-head"><div class="eyebrow">Simple process</div><h2>Start with one decision.</h2></div><div class="stepgrid">
+<div class="step"><div class="num">01</div><h3>Tell us your goal</h3><p>Share what you want to improve and where you're struggling.</p></div>
+<div class="step"><div class="num">02</div><h3>Choose your program</h3><p>Pick the area that best matches your current needs.</p></div>
+<div class="step"><div class="num">03</div><h3>Take action</h3><p>Follow a structured approach and build habits that last.</p></div>
+</div></div></section>
+
+<section class="testimonials"><div class="wrap"><div class="section-head"><div class="eyebrow" style="color:#d9ae51">Real journeys</div><h2>Small changes. Meaningful progress.</h2></div><div class="testgrid">
+<div class="quote-card"><div class="stars">★★★★★</div><p>“The guidance made healthy eating feel practical instead of overwhelming.”</p><strong>— FitNow Client</strong></div>
+<div class="quote-card"><div class="stars">★★★★★</div><p>“I finally had a routine I could actually stick to.”</p><strong>— FitNow Client</strong></div>
+<div class="quote-card"><div class="stars">★★★★★</div><p>“The biggest change was learning how to make better choices consistently.”</p><strong>— FitNow Client</strong></div>
+</div><div class="disclaimer">Results may vary. Individual outcomes depend on personal circumstances, consistency and other factors.</div></div></section>
+
+<section id="about"><div class="wrap"><div class="cta"><div><div class="eyebrow">Why FitNow</div><h2>Don't wait for a diagnosis to start caring about your health.</h2><p>The best time to build healthier habits is before your health forces you to.</p></div><a class="btn btn-dark" href="#contact">Talk to FitNow</a></div></div></section>
+
+<section class="contact" id="contact"><div class="wrap"><div class="contactgrid"><div><div class="eyebrow">Get in touch</div><h2>Let's start your next step.</h2><p>Have a question about a program? Send an enquiry or contact FitNow directly.</p><div class="contactbox">
+<div class="contactrow"><strong>WhatsApp</strong><br><a href="https://wa.me/917019728215">+91 70197 28215</a></div>
+<div class="contactrow"><strong>Email</strong><br><a href="mailto:support.fitnow@gmail.com">support.fitnow@gmail.com</a></div>
+</div></div>
+<div class="contactbox"><form onsubmit="sendWhatsApp(event)"><input id="name" required placeholder="Your name"><input id="phone" required placeholder="Phone number"><input id="email" type="email" placeholder="Email address"><select id="program"><option>Choose a program</option><option>Cholesterol</option><option>Thyroid</option><option>Weight Gain</option><option>Weight Loss</option><option>General Fitness</option><option>Diet Consultation</option></select><textarea id="message" placeholder="Tell us how we can help"></textarea><button class="btn btn-dark" type="submit">Send Enquiry on WhatsApp</button></form></div>
+</div></div></section>
+
+<footer><div class="wrap footgrid"><div><div class="logo footerlogo">fit<span>now</span></div><p class="small">Structured wellness guidance for people ready to take their health seriously.</p></div><div><strong>Explore</strong><p class="small"><a href="#programs">Programs</a><br><a href="#how">How It Works</a><br><a href="#about">About</a></p></div><div><strong>Contact</strong><p class="small"><a href="https://wa.me/917019728215">+91 70197 28215</a><br><a href="mailto:support.fitnow@gmail.com">support.fitnow@gmail.com</a></p></div></div></footer>
+<a class="float" href="https://wa.me/917019728215" aria-label="WhatsApp">◉</a>
+<script>
+function sendWhatsApp(e){e.preventDefault();let n=document.getElementById('name').value,p=document.getElementById('phone').value,e1=document.getElementById('email').value,pr=document.getElementById('program').value,m=document.getElementById('message').value;let text=`Hello FitNow!%0A%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AEmail: ${encodeURIComponent(e1)}%0AProgram: ${encodeURIComponent(pr)}%0AMessage: ${encodeURIComponent(m)}`;window.open('https://wa.me/917019728215?text='+text,'_blank')}
+</script>
+</body></html>
