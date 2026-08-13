@@ -1,0 +1,21 @@
+FITNOW WHATSAPP + EXCEL/GOOGLE SHEETS SETUP
+
+1. WhatsApp
+The website is already configured to open WhatsApp to +91 70197 28215 with the visitor's enquiry filled in.
+
+2. Save enquiries to Excel automatically
+The most reliable web setup is Google Sheets, which you can download as Excel (.xlsx).
+- Create a new Google Sheet.
+- Open Extensions -> Apps Script.
+- Paste the contents of google-apps-script.gs.
+- Deploy -> New deployment -> Web app.
+- Execute as: Me.
+- Who has access: Anyone.
+- Copy the Web App URL ending in /exec.
+- Open index.html and replace the empty GOOGLE_SHEETS_WEB_APP_URL value with that URL.
+
+3. Backup
+The website also saves submissions in the browser and includes a Download Local Leads button. This is only a local backup; Google Sheets is recommended for a central lead list.
+
+4. Disclaimer
+The form includes a consent line and the website displays a clear statement that results vary from person to person. Replace sample testimonials with genuine client feedback before publishing them as real testimonials.
